@@ -1,0 +1,229 @@
+:root {
+  --font-stack: 'Nunito', sans-serif;
+  --segment-opacity: 0.05;
+  --text-color: #293357;
+}
+
+body {
+  background-color: #7cb5b8;
+  font-family: var(--font-stack);
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+header {
+  font-size: 16px;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+}
+
+h1, p {
+  color: var(--text-color);
+}
+
+.clock {
+  position: relative;
+}
+
+.clock-face {
+  position: relative;
+  z-index: 2;
+}
+
+.number {
+  height: 41%;
+  position: absolute;
+  top: 23%;
+  width: 12.2%;
+  z-index: 4;
+}
+
+.number.display-zero .pos5 {
+  opacity: var(--segment-opacity);
+}
+.number.display-one svg {
+  opacity: var(--segment-opacity);
+}
+.number.display-one .pos1,
+.number.display-one .pos2 {
+  opacity: 1;
+}
+.number.display-two .pos2,
+.number.display-two .pos4 {
+  opacity: var(--segment-opacity);
+}
+.number.display-three .pos4,
+.number.display-three .pos6 {
+  opacity: var(--segment-opacity);
+}
+.number.display-four .pos0,
+.number.display-four .pos3,
+.number.display-four .pos6 {
+  opacity: var(--segment-opacity);
+}
+.number.display-five .pos1,
+.number.display-five .pos6 {
+  opacity: var(--segment-opacity);
+}
+.number.display-six .pos1 {
+  opacity: var(--segment-opacity);
+}
+.number.display-seven .pos3,
+.number.display-seven .pos4,
+.number.display-seven .pos5,
+.number.display-seven .pos6 {
+  opacity: var(--segment-opacity);
+}
+.number.display-nine .pos6 {
+  opacity: var(--segment-opacity);
+}
+
+.number.number_0 {
+  left: 8.8%;
+}
+.number.number_1 {
+  left: 21.5%;
+}
+.number.number_2 {
+  left: 37.4%;
+}
+.number.number_3 {
+  left: 50.1%;
+}
+.number.number_4 {
+  left: 66.1%;
+}
+.number.number_5 {
+  left: 79%;
+}
+
+.number svg {
+  width: 20%;
+  height: 50%;
+  position: absolute;
+}
+
+/* While alarm is going */
+.alarming .number svg polygon {
+  fill: #f00;
+}
+
+.number svg.horiz {
+  width: 68%;
+  height: 16%;
+}
+
+.number svg.top {
+  top: 0;
+  left: 25.9%;
+}
+
+.number svg.middle {
+  top: 43.3%;
+  left: 15.5%;
+}
+
+.number svg.bottom {
+  top: 85%;
+  left: 7%;
+}
+
+.number svg.right.pos1 {
+  top: 3.9%;
+  right: 1.2%;
+}
+
+.number svg.right.pos2 {
+  top: 48%;
+  right: 9.9%;
+}
+
+.number svg.left.pos4 {
+  left: 10%;
+  top: 4.3%;
+}
+
+.number svg.left.pos6 {
+  top: 48.5%;
+  left: 0;
+}
+
+form#alarm-form {
+  z-index: 8;
+}
+
+form.hidden {
+  display: none;
+}
+
+label {
+  color: var(--text-color);
+  display: block;
+}
+
+label .label-text {
+  display: block;
+  font-family: var(--font-stack);
+  font-size: 1.4rem;
+}
+
+label .instruction-text {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  padding-top: 8px;
+}
+
+input#alarm {
+  background-color: transparent;
+  border: 2px solid rgba(255,255,255,0.15);
+  color: var(--text-color);
+  font-family: var(--font-stack);
+  font-size: 5rem;
+  height: auto;
+  width: 95%;
+}
+
+input#alarm::placeholder {
+  color: #2d334733;
+  font-size: 4rem;
+}
+
+
+/* Clock buttons */
+button.snooze {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 8%;
+  top: -1%;
+  width: 28%;
+  z-index: 1;
+
+  transition: top 300ms ease-in-out;
+}
+
+.alarming button.snooze {
+  top: -3%;
+}
+
+.set-alarm {
+  background: transparent;
+  border: 0;
+  bottom: 21.9%;
+  cursor: pointer;
+  opacity: 0.45;
+  position: absolute;
+  right: 10%;
+  width: 6%;
+  z-index: 3;
+}
+
+.set-alarm.alarm-is-set {
+  opacity: 1;
+}

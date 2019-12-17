@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clock</title>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Digital Clock</h1>
+      <p>Hi there. Check out my digital clock. Now, I know it's already a pretty big deal that it tells you the time and everything, but guess what?  <b>You can set alarms, too!</b> Just click the bell in the corner, type in your time and hit enter to add an alarm, and when it goes off click the snooze button on top stop it. Neat!</p>
+    </header>
+    <section>
+      <div class="clock">
+        <img class="clock-face" src="assets/svg/clock-face__orig.svg">
+        <button class="snooze"><img src="assets/svg/snooze.svg"></button>
+        <button class="set-alarm"><img src="assets/svg/alarm.svg"></button>
+      </div>
+
+      <form class="hidden" id="alarm-form">
+        <label for="alarm">
+          <span class="label-text">Add an alarm</span>
+          <input type="text" name="alarm" id="alarm" placeholder="e.g. 8:47 or 12:03" value="">
+          <span class="instruction-text"><em>Make sure you add the ":" in between your hours and minutes!</em></span>
+        </label>
+      </form>
+    </section>
+  </div>
+
+  <script src="js/svg-defs.js"></script>
+  <script src="js/clock.js"></script>
+</body>
+</html>
